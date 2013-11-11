@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class ServiceTicket(models.Model):
     user = models.ForeignKey(User)
-    service = models.URLField(verify_exists=False)
+    service = models.URLField()
     ticket = models.CharField(max_length=256)
     created = models.DateTimeField(auto_now=True)
     
